@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!--
+parser error for parametrized layout;
+no references for parameter names
+no reference for thymeleaf variable used as parameter value
+-->
+<html xmlns:th="https://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{decorator/decorate_test_parametrized_layout(parameter1 = 'hello!', parameter2 = ${test3})}" lang="en">
+<head>
+  <title>Parametrized Decorator Test3</title>
+</head>
+<body>
+  <p>test3 page contents</p>
+<footer>
+  <p layout:fragment="custom-test-footer">footer content from test3 page</p>
+</footer>
+</body>
+</html>

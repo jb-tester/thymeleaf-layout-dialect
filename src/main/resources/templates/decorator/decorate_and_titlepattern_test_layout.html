@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en">
+<head>
+  <!-- title:pattern: parser errors for $LAYOUT_TITLE and $CONTENT_TITLE tokens -->
+  <title  layout:title-pattern="$CONTENT_TITLE with layout from $LAYOUT_TITLE">Decorator And TitlePattern Layout</title>
+
+</head>
+<body>
+<header>
+  <h1>Decorator test</h1>
+</header>
+<!-- find usages doesn't find any usages -->
+<section layout:fragment="custom-test-content">
+  <p>decorator test page content goes here</p>
+</section>
+<footer>
+  <p>********</p>
+  <p layout:fragment="custom-test-footer">Custom decorator footer</p>
+  <p>********</p>
+</footer>
+</body>
+</html>

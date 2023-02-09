@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en">
+<!-- layout:fragment: not resolved fragment parameter -->
+<section class="insert-template" layout:fragment="my-insert-layout(param1)">
+    <header th:text="${param1}">some title</header>
+    <div class="insert-body">
+        <div layout:fragment="insert-content">
+            some content
+        </div>
+    </div>
+</section>

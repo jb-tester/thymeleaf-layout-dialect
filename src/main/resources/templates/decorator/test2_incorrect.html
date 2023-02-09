@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+       lang="en">
+<head>
+  <title>Decorator Test2</title>
+
+</head>
+<body>
+<section layout:fragment="custom-test-content">
+  <p>test2 page contents</p>
+  <p>in this page only footer fragment is replaced</p>
+</section>
+<footer>
+  <!-- error should be detected: layout:decorate not in the root element -->
+  <p layout:decorate="~{decorator/decorate_and_titlepattern_test_layout}" layout:fragment="custom-test-footer">footer content from test2 page</p>
+</footer>
+</body>
+</html>
